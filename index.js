@@ -11,7 +11,7 @@ function play(question , answer){
 
   var userAnswer = readlineSync.question(question);
 
-  if(userAnswer == answer){
+  if(userAnswer.toUpperCase == answer.toUpperCase){
     console.log(chalk.green("right"));
     score = score + 1;
    
@@ -60,6 +60,7 @@ for( var i = 0 ; i < questions.length ; i++){
   
   var vote = questions[i];
   play(vote.question, vote.answer);
+  console.log("answer = " + vote.answer);
   console.log(chalk.green(score));
 }
 
