@@ -11,7 +11,7 @@ function play(question , answer){
 
   var userAnswer = readlineSync.question(question);
 
-  if(userAnswer.toUpperCase == answer.toUpperCase){
+  if(userAnswer == answer){
     console.log(chalk.green("right"));
     score = score + 1;
    
